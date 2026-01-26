@@ -33,6 +33,33 @@ export default function MOHChatbot() {
           </div>
         </div>
       </div>
+
+      {/* Chatbot Container */}
+      <div className="flex-1 max-w-7xl mx-auto w-full p-6">
+        <div className="bg-white rounded-2xl shadow-xl h-full flex items-center justify-center border border-emerald-100">
+          <div className="text-center p-8">
+            <div className="w-20 h-20 mx-auto mb-6 rounded-2xl bg-linear-to-br from-emerald-500 to-emerald-600 flex items-center justify-center shadow-lg">
+              <HeartPulse className="size-10 text-white" />
+            </div>
+            <h2 className="text-2xl font-bold text-slate-900 mb-3">
+              MOH Chatbot
+            </h2>
+            <p className="text-slate-600 mb-6 max-w-md">
+              Here is where Flowise chatbot will be embedded. Replace this placeholder with Flowise embed code.
+            </p>
+            <div className="bg-emerald-50 border border-emerald-200 rounded-lg p-4 text-left max-w-2xl mx-auto">
+              <p className="text-sm font-mono text-emerald-900 mb-2">
+                To embed Flowise chatbot:
+              </p>
+              <ol className="text-sm text-emerald-800 space-y-2 list-decimal list-inside">
+                <li>Getting chatbot embed code from Flowise</li>
+                <li>Replace this placeholder content with the embed script</li>
+                <li>Configure the chatbot settings as needed</li>
+              </ol>
+            </div>
+          </div>
+        </div>
+      </div>
     </div>
   );
 }
