@@ -1,6 +1,6 @@
 'use client';
 
-import { ArrowLeft, Building2 } from "lucide-react";
+import { ArrowLeft, Building2 } from 'lucide-react';
 import { useRouter } from 'next/navigation';
 
 export default function MoITChatbot() {
