@@ -33,6 +33,20 @@ export default function NLCSChatbot() {
           </div>
         </div>
       </div>
+
+      {/* Chatbot Container */}
+      <div className="flex-1 max-w-7xl mx-auto w-full p-6">
+        <div className="bg-white rounded-2xl shadow-xl h-full flex items-center justify-center border border-purple-100">
+          <div className="text-center p-8">
+            <div className="w-20 h-20 mx-auto mb-6 rounded-2xl bg-linear-to-br from-purple-500 to-purple-600 flex items-center justify-center shadow-lg">
+              <Landmark className="size-10 text-white" />
+            </div>
+            <h2 className="text-2xl font-bold text-slate-900 mb-3">
+              NLCS Chatbot
+            </h2>
+          </div>
+        </div>
+      </div>
     </div>
   );
 }
