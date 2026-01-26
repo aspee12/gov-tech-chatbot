@@ -1,3 +1,5 @@
+'use client';
+
 import { ArrowLeft, HeartPulse } from "lucide-react";
 import { useRouter } from "next/navigation";
 
