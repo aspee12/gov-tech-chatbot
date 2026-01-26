@@ -1,6 +1,10 @@
-import { ArrowLeft, Landmark } from 'lucide-react';
+'use client';
+
+import { ArrowLeft, Landmark } from "lucide-react";
+import { useRouter } from "next/navigation";
 
 export default function NLCSChatbot() {
+  const navigate = useRouter();
   return (
     <div className="min-h-screen bg-linear-to-br from-purple-50 to-purple-100 flex flex-col">
       {/* Header */}
@@ -8,7 +12,7 @@ export default function NLCSChatbot() {
         <div className="max-w-7xl mx-auto px-6 py-4 flex items-center justify-between">
           <div className="flex items-center gap-4">
             <button
-              onClick={() => ("/")}
+              onClick={() => navigate.push("/")}
               className="p-2 hover:bg-purple-50 rounded-lg transition-colors"
             >
               <ArrowLeft className="size-6 text-slate-700" />
@@ -44,6 +48,20 @@ export default function NLCSChatbot() {
             <h2 className="text-2xl font-bold text-slate-900 mb-3">
               NLCS Chatbot
             </h2>
+            <p className="text-slate-600 mb-6 max-w-md">
+              This is where my Flowise chatbot will be embedded. Will Replace
+              this placeholder with Flowise embed code.
+            </p>
+            <div className="bg-blue-50 border border-blue-200 rounded-lg p-4 text-left max-w-2xl mx-auto">
+              <p className="text-sm font-mono text-blue-900 mb-2">
+                To embed Flowise chatbot:
+              </p>
+              <ol className="text-sm text-blue-800 space-y-2 list-decimal list-inside">
+                <li>Getting chatbot embed code from Flowise</li>
+                <li>Replace this placeholder content with the embed script</li>
+                <li>Configure the chatbot settings as needed</li>
+              </ol>
+            </div>
           </div>
         </div>
       </div>
