@@ -1,7 +1,7 @@
 'use client';
 
-import { ArrowLeft, Landmark } from "lucide-react";
-import { useRouter } from "next/navigation";
+import { ArrowLeft, Landmark } from 'lucide-react';
+import { useRouter } from 'next/navigation';
 
 export default function NLCSChatbot() {
   const navigate = useRouter();
