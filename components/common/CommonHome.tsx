@@ -1,7 +1,7 @@
 'use client';
 
 import { useRouter } from 'next/navigation';
-import { MessageSquare, Building2, HeartPulse, Landmark } from "lucide-react";
+import { MessageSquare, Building2, HeartPulse, Landmark } from 'lucide-react';
 
 export default function Home() {
    const router = useRouter();
@@ -34,7 +34,7 @@ export default function Home() {
   ];
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-slate-50 to-slate-100 flex items-center justify-center p-6">
+    <div className="min-h-screen bg-linear-to-br from-slate-50 to-slate-100 flex items-center justify-center p-6">
       <div className="w-full max-w-6xl">
         {/* Header */}
         <div className="text-center mb-12">
@@ -42,7 +42,7 @@ export default function Home() {
             <MessageSquare className="size-12 text-slate-700" />
           </div>
           <h1 className="text-4xl font-bold text-slate-900 mb-3">
-            Chatbot Portal
+            Gov Tech Chatbot Portal
           </h1>
           <p className="text-lg text-slate-600">
             Select a chatbot to start your conversation
@@ -57,7 +57,7 @@ export default function Home() {
               <button
                 key={bot.id}
                 onClick={() => router.push(`/${bot.id}`)}
-                className="group relative bg-white rounded-2xl p-8 shadow-lg hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-1"
+                className="group relative bg-white rounded-2xl p-8 shadow-lg hover:cursor-pointer hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-1"
               >
                 {/* Gradient Background */}
                 <div className={`absolute inset-0 bg-linear-to-br ${bot.color} ${bot.hoverColor} opacity-0 group-hover:opacity-5 rounded-2xl transition-opacity duration-300`} />
@@ -100,7 +100,7 @@ export default function Home() {
         {/* Footer Info */}
         <div className="mt-12 text-center">
           <p className="text-sm text-slate-500">
-            Powered by Flowise • AI-Driven Conversations
+            Intelligent Chat • Built on Flowise AI
           </p>
         </div>
       </div>
