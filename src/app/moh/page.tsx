@@ -1,4 +1,4 @@
-import MOHChatbot from '@/src/components/sections/MOHChatbot';
+import MOHChatbot from '@component/sections/MOHChatbot';
 
 export default function Page() {
   return <MOHChatbot />;

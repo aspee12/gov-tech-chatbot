@@ -1,4 +1,4 @@
-import NLCSChatbot from '@/src/components/sections/NLCSChatbot';
+import NLCSChatbot from '@component/sections/NLCSChatbot';
 
 export default function Page() {
   return <NLCSChatbot />;
