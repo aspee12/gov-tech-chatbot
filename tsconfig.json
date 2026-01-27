@@ -19,7 +19,9 @@
       }
     ],
     "paths": {
-      "@/*": ["./*"]
+      "@/*": ["./*"],
+      "@app-types/*": ["./src/types/*"],
+      "@constants/*": ["./src/constants/*"],
     }
   },
   "include": [

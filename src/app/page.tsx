@@ -1,4 +1,4 @@
-import CommonHome from '@/components/common/CommonHome';
+import CommonHome from '@/src/components/common/CommonHome';
 
 export default function Home() {
   return (

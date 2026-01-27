@@ -4,7 +4,7 @@ import { useRouter } from 'next/navigation';
 import { MessageSquare, Building2, HeartPulse, Landmark } from 'lucide-react';
 
 export default function Home() {
-   const router = useRouter();
+  const router = useRouter();
 
   const chatbots = [
     {
