@@ -1,38 +1,12 @@
 'use client';
 
 import { useRouter } from 'next/navigation';
-import { MessageSquare, Building2, HeartPulse, Landmark } from 'lucide-react';
+import { MessageSquare } from 'lucide-react';
+import { chatBots } from '@constants/shared';
 
 export default function Home() {
   const router = useRouter();
-
-  const chatbots = [
-    {
-      id: "moit",
-      name: "MoIT",
-      description: "Ministry of IT Chatbot",
-      icon: Building2,
-      color: "from-blue-500 to-blue-600",
-      hoverColor: "hover:from-blue-600 hover:to-blue-700",
-    },
-    {
-      id: "moh",
-      name: "MOH",
-      description: "Ministry of Health Chatbot",
-      icon: HeartPulse,
-      color: "from-emerald-500 to-emerald-600",
-      hoverColor: "hover:from-emerald-600 hover:to-emerald-700",
-    },
-    {
-      id: "nlcs",
-      name: "NLCS",
-      description: "National Land Commission Secretariat",
-      icon: Landmark,
-      color: "from-purple-500 to-purple-600",
-      hoverColor: "hover:from-purple-600 hover:to-purple-700",
-    },
-  ];
-
+  
   return (
     <div className="min-h-screen bg-linear-to-br from-slate-50 to-slate-100 flex items-center justify-center p-6">
       <div className="w-full max-w-6xl">
@@ -51,7 +25,7 @@ export default function Home() {
 
         {/* Chatbot Cards */}
         <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
-          {chatbots.map((bot) => {
+          {chatBots.map((bot) => {
             const Icon = bot.icon;
             return (
               <button

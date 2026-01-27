@@ -1,7 +1,7 @@
 import { Building2, HeartPulse, Landmark } from 'lucide-react';
 import { Chatbot } from '@app-types/chatbot';
 
-export const chatbots: Chatbot[] = [
+export const chatBots: Chatbot[] = [
     {
       id: "moit",
       name: "MoIT",
