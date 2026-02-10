@@ -1,7 +1,7 @@
 'use client';
 
 import { ArrowLeft, Building2 } from 'lucide-react';
-import { useEffect, useRef } from 'react';
+import { useEffect } from 'react';
 
 export default function MoITChatbot() {
   
@@ -30,10 +30,12 @@ export default function MoITChatbot() {
                 "https://tech.gov.bt/wp-content/uploads/2025/09/logo.png",
             },
           },
-
           disclaimer: {
             title: "Disclaimer",
-            message: "AI-generated content may be inaccurate. Please verify.",
+            message: `<p style="text-align:justify">Responses are generated automatically by AI based on your input, and we cannot guarantee that the information will be complete, accurate, or up-to-date.
+                      <br/>Accordingly, the information provided by the Chatbot should not be considered as a basis for production workloads.
+                      <br/>You are solely responsible for the interactions and reliance on the information provided by the Chatbot, as well as for any actions taken or not taken.
+                      <br/><b>AI-generated content may be inaccurate. Please validate before making decisions.</b></p>`,
             buttonText: "Start Chatting",
           },
         },
@@ -93,13 +95,13 @@ export default function MoITChatbot() {
             </p>
             <div className="bg-blue-50 border border-blue-200 rounded-lg p-4 text-left max-w-2xl mx-auto">
               <p className="text-sm font-mono text-blue-900 mb-2">What you can ask the MoIT Chatbot</p>
-              <ol className="text-sm text-blue-800 space-y-2 list-decimal list-inside">
+              <ul className="text-sm text-blue-800 space-y-2 list-decimal list-inside">
                 <li>Information about MoIT services and departments</li>
                 <li>Guidance on digital government platforms and systems</li>
                 <li>ICT policies, guidelines, and procedures</li>
                 <li>Frequently asked questions related to MoIT initiatives</li>
                 <li>General support and directions to relevant resources</li>
-              </ol>
+              </ul>
             </div>
             <p className="mt-4 text-xs text-slate-500 max-w-xl mx-auto">
               This chatbot provides general information for guidance purposes only. For official confirmation or sensitive matters, please contact MoIT directly.

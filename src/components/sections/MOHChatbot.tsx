@@ -1,10 +1,53 @@
 'use client';
 
 import { ArrowLeft, HeartPulse } from 'lucide-react';
-import { useRouter } from 'next/navigation';
+import { useEffect } from 'react';
 
 export default function MOHChatbot() {
-  const navigate = useRouter();
+
+  useEffect(() => {
+      const script = document.createElement("script");
+      script.type = "module";
+      script.src = "https://cdn.jsdelivr.net/npm/flowise-embed/dist/web.js";
+  
+      script.onload = () => {
+        // @ts-ignore
+        window.Chatbot.init({
+          chatflowid: "a74fa02c-bc26-4275-a74b-e9e99cbe2de2",
+          apiHost: "https://chatbot.tech.gov.bt",
+  
+          theme: {
+            chatWindow: {
+              showTitle: true,
+              title: "MoH AI Chatbot",
+              welcomeMessage:
+                "Kuzuzangpo la! 👋 I am MoH AI Assistant. How can I help you today?",
+              titleAvatarSrc:
+                "/assets/moh.png",
+              botMessage: {
+                showAvatar: true,
+                avatarSrc:
+                  "/assets/moh.png",
+              },
+            },
+            disclaimer: {
+              title: "Disclaimer",
+              message: `<p style="text-align:justify">Responses are generated automatically by AI based on your input, and we cannot guarantee that the information will be complete, accurate, or up-to-date.
+                        <br/>Accordingly, the information provided by the Chatbot should not be considered as a basis for production workloads.
+                        <br/>You are solely responsible for the interactions and reliance on the information provided by the Chatbot, as well as for any actions taken or not taken.
+                        <br/><b>AI-generated content may be inaccurate. Please validate before making decisions.</b></p>`,
+              buttonText: "Start Chatting",
+            },
+          },
+        });
+      };
+  
+      document.body.appendChild(script);
+  
+      return () => {
+        document.body.removeChild(script);
+      };
+    }, []);
 
   return (
     <div className="min-h-screen bg-linear-to-br from-emerald-50 to-emerald-100 flex flex-col">
@@ -13,8 +56,8 @@ export default function MOHChatbot() {
         <div className="max-w-7xl mx-auto px-6 py-4 flex items-center justify-between">
           <div className="flex items-center gap-4">
             <button
-              onClick={() => navigate.push("/")}
-              className="p-2 hover:bg-emerald-50 rounded-lg transition-colors">
+              onClick={() => (window.location.href = "/")}
+              className="p-2 hover:bg-emerald-50 rounded-lg transition-colors cursor-pointer">
               <ArrowLeft className="size-6 text-slate-700" />
             </button>
             <div className="flex items-center gap-3">
@@ -47,18 +90,28 @@ export default function MOHChatbot() {
               MOH Chatbot
             </h2>
             <p className="text-slate-600 mb-6 max-w-md">
-              Here is where Flowise chatbot will be embedded. Replace this placeholder with Flowise embed code.
+              Welcome to the Ministry of Health (MoH), Royal Government of Bhutan virtual assistant.
+              This chatbot is designed to support citizens, health professionals, and visitors
+              by providing quick access to information related to public health services,
+              healthcare programs, policies, and national health initiatives.
             </p>
             <div className="bg-emerald-50 border border-emerald-200 rounded-lg p-4 text-left max-w-2xl mx-auto">
               <p className="text-sm font-mono text-emerald-900 mb-2">
-                To embed Flowise chatbot:
+                What you can ask the MoH Chatbot
               </p>
-              <ol className="text-sm text-emerald-800 space-y-2 list-decimal list-inside">
-                <li>Getting chatbot embed code from Flowise</li>
-                <li>Replace this placeholder content with the embed script</li>
-                <li>Configure the chatbot settings as needed</li>
-              </ol>
+              <ul className="text-sm text-emerald-800 space-y-2 list-decimal list-inside">
+                <li>Information on public healthcare services and facilities</li>
+                <li>Maternal, child, and community health programs</li>
+                <li>Guidance on disease prevention and health awareness</li>
+                <li>Health policies, strategies, and national programs</li>
+                <li>Frequently asked questions related to MoH services</li>
+              </ul>
             </div>
+            <p className="mt-4 text-xs text-slate-500 max-w-xl mx-auto">
+              This chatbot provides general health-related information for guidance purposes only
+              and does not replace professional medical advice, diagnosis, or treatment.
+              For medical emergencies or clinical concerns, please consult a qualified healthcare provider.
+            </p>
           </div>
         </div>
       </div>
