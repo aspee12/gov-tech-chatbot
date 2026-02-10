@@ -12,7 +12,7 @@ export const chatBots: Chatbot[] = [
     },
     {
       id: "moh",
-      name: "MOH",
+      name: "MoH",
       description: "Ministry of Health Chatbot",
       icon: HeartPulse,
       color: "from-emerald-500 to-emerald-600",

@@ -17,17 +17,17 @@ export default function MOHChatbot() {
           apiHost: "https://chatbot.tech.gov.bt",
   
           theme: {
+            button: {
+              backgroundColor: "#009966"
+            },
             chatWindow: {
               showTitle: true,
               title: "MoH AI Chatbot",
-              welcomeMessage:
-                "Kuzuzangpo la! 👋 I am MoH AI Assistant. How can I help you today?",
-              titleAvatarSrc:
-                "/assets/moh.png",
+              welcomeMessage: "Kuzuzangpo la! 👋 I am MoH AI Assistant. How can I help you today?",
+              titleAvatarSrc: "/assets/moh.png",
               botMessage: {
                 showAvatar: true,
-                avatarSrc:
-                  "/assets/moh.png",
+                avatarSrc: "/assets/moh.png",
               },
             },
             disclaimer: {
@@ -66,7 +66,7 @@ export default function MOHChatbot() {
               </div>
               <div>
                 <h1 className="text-xl font-bold text-slate-900">
-                  MOH Chatbot
+                  MoH Chatbot
                 </h1>
                 <p className="text-sm text-slate-600">Ministry of Health</p>
               </div>
@@ -87,7 +87,7 @@ export default function MOHChatbot() {
               <HeartPulse className="size-10 text-white" />
             </div>
             <h2 className="text-2xl font-bold text-slate-900 mb-3">
-              MOH Chatbot
+              MoH Chatbot
             </h2>
             <p className="text-slate-600 mb-6 max-w-md">
               Welcome to the Ministry of Health (MoH), Royal Government of Bhutan virtual assistant.

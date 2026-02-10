@@ -18,6 +18,9 @@ export default function NLCSChatbot() {
             apiHost: "https://chatbot.tech.gov.bt",
     
             theme: {
+              button: {
+                backgroundColor: "#a855f7"
+              },
               chatWindow: {
                 showTitle: true,
                 title: "NLCS AI Chatbot",

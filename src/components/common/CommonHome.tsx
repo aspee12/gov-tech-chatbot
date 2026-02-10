@@ -16,7 +16,7 @@ export default function Home() {
             <MessageSquare className="size-12 text-slate-700" />
           </div>
           <h1 className="text-4xl font-bold text-slate-900 mb-3">
-            Gov Tech Chatbot Portal
+            Ministries and Agencies Chatbot
           </h1>
           <p className="text-lg text-slate-600">
             Select a chatbot to start your conversation

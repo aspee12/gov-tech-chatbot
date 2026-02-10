@@ -107,9 +107,6 @@ export default function MoITChatbot() {
               This chatbot provides general information for guidance purposes only. For official confirmation or sensitive matters, please contact MoIT directly.
             </p>
           </div>
-
-          {/* Flowise Chatbot */}
-          <div id="flowise-chatbot" className="flex-1 min-h-100 mx-4 mb-4 rounded-xl overflow-hidden" />
         </div>
       </div>
     </div>
